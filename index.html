@@ -383,6 +383,14 @@
                             <h4>Question ${item.questionNumber}: ${item.question}</h4>
                             <p><span class="your-answer">Your answer:</span> ${item.userAnswer ? item.userAnswer + '. ' : ''}${userAnswerText}</p>
                             <p><span class="correct-answer">Correct answer:</span> ${item.correctAnswer}. ${correctAnswerText}</p>
+			    <span> <br><br>
+			      All answers:
+			      <ol type="A" style="padding: 5px">
+			      <li>
+			      ${item.options.join("</li><li>")}
+			      </li>
+			      </ol>
+			    </span>
                         `;
                         incorrectContainer.appendChild(div);
                     });
